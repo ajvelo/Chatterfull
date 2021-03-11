@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "562223955677",
+    "project_id": "chatterfull",
+    "storage_bucket": "chatterfull.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562223955677:android:d93d664c499fb883dda534",
+        "android_client_info": {
+          "package_name": "com.andreasvelounias.chatterfull"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562223955677-mukk0rlfcc73ef7n2p53u9cr8jh8vvo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0lbH7vEBuDckbjIgX3CGXsmPHHRrbLrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562223955677-mukk0rlfcc73ef7n2p53u9cr8jh8vvo8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "562223955677-ihvqmbvm8i2gdd4q895lvs24tiki806v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.andreasvelounias.chatterfull"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
