@@ -1,4 +1,4 @@
-import 'package:app/widgets/auth_form.dart';
+import 'package:app/widgets/auth/auth_form.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class _AuthScreenState extends State<AuthScreen> {
   final _auth = FirebaseAuth.instance;
   void _submitAuthForm(String email, String password, String username,
       bool isLogin, BuildContext context) async {
-    AuthResult authResult;
+    UserCredential authResult;
     try {
       if (isLogin) {
         authResult = await _auth.signInWithEmailAndPassword(
@@ -23,10 +23,10 @@ class _AuthScreenState extends State<AuthScreen> {
             email: email, password: password);
       }
 
-      await Firestore.instance
+      await FirebaseFirestore.instance
           .collection('users')
-          .document(authResult.user.uid)
-          .setData({'username': username, 'email': email});
+          .doc(authResult.user!.uid)
+          .set({'username': username, 'email': email});
     } on PlatformException catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(e.message ?? "An unknown error occured")));
